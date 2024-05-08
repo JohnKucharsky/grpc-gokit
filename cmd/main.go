@@ -33,7 +33,7 @@ func main() {
 		errs <- fmt.Errorf("%s", <-c)
 	}()
 
-	grpcListener, err := net.Listen("tcp", ":50051")
+	grpcListener, err := net.Listen("tcp", ":666")
 	if err != nil {
 		_ = logger.Log("transport", "gRPC", "during", "Listen", "err", err)
 		os.Exit(1)
